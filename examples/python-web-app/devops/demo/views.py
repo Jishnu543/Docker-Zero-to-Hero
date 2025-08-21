@@ -1,6 +1,7 @@
 from django.http import HttpResponse
-from django.shortcuts import render
-
 
 def index(request):
-    return render(request, 'demo_site.html')
+    return HttpResponse("<h1>Welcome to the Index Page</h1>")
+
+def demo(request):
+    return HttpResponse("<h1>Hello from the /demo endpoint!</h1>")
