@@ -1,8 +1,7 @@
 from django.contrib import admin
-from django.urls import path
-from . import views   # make sure views.py exists
+from django.urls import path, include
 
 urlpatterns = [
-    path('', views.index, name='index'),   # homepage only
-    path('admin/', admin.site.urls),       # Django admin
+    path('admin/', admin.site.urls),
+    path('demo/', include('demo.urls')),  # include the demo app urls
 ]
